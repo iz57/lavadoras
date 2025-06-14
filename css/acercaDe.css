@@ -1,0 +1,112 @@
+/* Variables de color y fuentes usadas ya en tu CSS */
+:root {
+  --primary-color: var(--azul-oscuro);
+  --primary-color-light: var(--azul-medio);
+  --secondary-color: #005a87; /* complementario para textos secundarios */
+  --background-color: #f5faff;
+  --text-color: var(--primary-color);
+  --font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius: 1rem;
+  --box-shadow: 0 4px 20px rgba(0, 60, 94, 0.2);
+}
+
+/* Estilos base */
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Titulos */
+h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Imagen servicio */
+.service-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+  transform: translateY(-5px);
+}
+
+/* Titulo del servicio */
+.service-title {
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+/* Subtitulo */
+.service-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Botón principal */
+.service-btn {
+  background-color: var(--primary-color);
+  color: var(--blanco);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(10, 36, 99, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+}
+
+.service-btn:hover,
+.service-btn:focus {
+  background-color: var(--primary-color-light);
+  box-shadow: 0 6px 14px rgba(62, 120, 178, 0.5);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* Contenedor de botón para controlar layout */
+.btn-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center; /* centra el botón */
+}
+
+/* Contenedor general, agrega un padding adecuado */
+.container {
+  padding-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
