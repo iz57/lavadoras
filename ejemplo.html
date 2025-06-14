@@ -1,0 +1,195 @@
+3 - Sistema de grillas de Bootstrap 5 Lo más importante de entender en un
+principio es el sistema de grillas que plantea la librería Bootstrap. Debemos
+pensar para armar nuestro esquema de la página que tenemos la posibilidad de
+definir filas y en cada fila definir de 1 hasta 12 columnas. Cada columna con un
+ancho relativo a ese número 12. Luego Bootstrap se encarga de colapsar las
+columnas cuando se accede al sitio desde un dispositivo con una capacidad
+limitada en cuanto al ancho en píxeles (esto permite una experiencia más
+placentera al visitante que accede a nuestra página desde un celular con
+capacidades limitadas) Para ver y entender como creamos las columnas en cada
+fila y como colapsan según el ancho del dispositivo podemos analizar el
+siguiente código:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba de Bootstrap 5</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-4" style="background-color: #aaa">
+          <h1>Columna 1</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-xxl-4" style="background-color: #bbb">
+          <h1>Columna 2</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-xxl-4" style="background-color: #ccc">
+          <h1>Columna 3</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xl-4" style="background-color: #aaa">
+          <h1>Columna 1</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-xl-4" style="background-color: #bbb">
+          <h1>Columna 2</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-xl-4" style="background-color: #ccc">
+          <h1>Columna 3</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-lg-4" style="background-color: #aaa">
+          <h1>Columna 1</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-lg-4" style="background-color: #bbb">
+          <h1>Columna 2</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-lg-4" style="background-color: #ccc">
+          <h1>Columna 3</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-md-4" style="background-color: #aaa">
+          <h1>Columna 1</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-md-4" style="background-color: #bbb">
+          <h1>Columna 2</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-md-4" style="background-color: #ccc">
+          <h1>Columna 3</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-sm-4" style="background-color: #aaa">
+          <h1>Columna 1</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-sm-4" style="background-color: #bbb">
+          <h1>Columna 2</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-sm-4" style="background-color: #ccc">
+          <h1>Columna 3</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-4" style="background-color: #aaa">
+          <h1>Columna 1</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-4" style="background-color: #bbb">
+          <h1>Columna 2</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-4" style="background-color: #ccc">
+          <h1>Columna 3</h1>
+          <p>Esto es una prueba de bootstrap.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+Si abrimos esta página en un monitor con un ancho superior a 1400 px podemos ver
+que se muestran tres columnas por fila: grid bootstrap 5 Debemos utilizar la
+clase "row" para indicar el comienzo de una fila. Dentro de la fila dispondremos
+tantos div como columnas tenga dicha fila. Para indicar cada columna debemos
+utilizar la siguiente sintaxis para cada columna: col-xxl-* Donde aparece el
+asterisco lo remplazamos por un valor entre 1 y 12 (en nuestro ejemplo hemos
+dispuesto un 4, esto quiere decir que quedan 8 unidades de columna para repartir
+entre las otras columnas) En nuestro ejemplo cada una de las columnas tiene un
+valor 4 (siempre la suma de dichos valores de una fila debe sumar 12 o quedarán
+columnas vacías en dicho caso) Como asignamos cuatro a cada columna las tres
+columnas tienen el mismo ancho:
+
+<div class="row">
+  <div class="col-xxl-4" style="background-color: #aaa">
+    <h1>Columna 1</h1>
+    <p>Esto es una prueba de bootstrap.</p>
+  </div>
+  <div class="col-xxl-4" style="background-color: #bbb">
+    <h1>Columna 2</h1>
+    <p>Esto es una prueba de bootstrap.</p>
+  </div>
+  <div class="col-xxl-4" style="background-color: #ccc">
+    <h1>Columna 3</h1>
+    <p>Esto es una prueba de bootstrap.</p>
+  </div>
+</div>
+Probemos ahora de empezar a disminuir el ancho del navegador mediante el mouse
+achicamos la ventana y veremos que cuando el ancho del navegador es menor a 1400
+px colapsan las columnas de la primer fila y se muestran una debajo de otra
+(esto sucede en cualquier dispositivo cuyo ancho en píxeles es menor a 1400):
+grid bootstrap 5 Pero ahora nos preguntamos porque la segunda fila que hemos
+definido no colapsa cuando el ancho del navegador baja de 1400px, esto es debido
+que hemos definido cada columna con la siguiente sintaxis:
+
+<div class="row">
+  <div class="col-xl-4" style="background-color: #aaa">
+    <h1>Columna 1</h1>
+    <p>Esto es una prueba de bootstrap.</p>
+  </div>
+  <div class="col-xl-4" style="background-color: #bbb">
+    <h1>Columna 2</h1>
+    <p>Esto es una prueba de bootstrap.</p>
+  </div>
+  <div class="col-xl-4" style="background-color: #ccc">
+    <h1>Columna 3</h1>
+    <p>Esto es una prueba de bootstrap.</p>
+  </div>
+</div>
+col-xl-4 Cuando utilizamos las clases "col-xl-*" luego la fila colapsará cuando
+el ancho del navegador se reduzca a menos de 1200px, podemos probarlo fácilmente
+reduciendo más el ancho del navegador y ver que ahora colapsan tanto la primera
+fila como la segunda fila: grid bootstrap 5 Lo mismo sucederá cuando utilicemos
+"col-lg-*" y reduzcamos los 992px: grid bootstrap 5 La cuarta fila utilizamos
+"col-md-*" y colapsa al llegar a un valor menor de 768px. La quinta fila
+utilizamos "col-sm-*" y colapsa al llegar a un valor menor de 576px. Por último
+hay que decir que cuando utilizamos las clases "col-*" nunca colapsarán las
+columnas. grid bootstrap 5 Es bueno analizar de que palabras vienen los nombres
+de reglas de estilo que provee Bootstrap: col-* col-sm-* (sm)all col-md-*
+(m)e(d)ium col-lg-* (l)ar(g)e col-xl-* (e)xtra (l)arge col-xxl-* (e)xtra (e)xtra
+(l)arge Ahora depende del tipo de página que uno tiene que implementar el
+definir en que momento queremos que nuestra estructura de página colapse sus
+columnas. Si no queremos que colapse luego empleamos col-* para definir las
+distintas columnas. Ejecutar Ejemplo Retornar
