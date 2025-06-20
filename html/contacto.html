@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Contacto</title>
+    <style>
+      /* Quitar sombra al formulario */
+      .contact-form {
+        box-shadow: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <img
+            class="logo-img me-2"
+            src="../img/logo2.png"
+            alt="Logo Reparaciones la Condesa"
+            width="50"
+            height="50"
+          />
+          <a class="navbar-brand mb-0 h1" href="#">REPARACIONES LA CONDESA</a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="acerca-de.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto" style="font-weight: bold"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row align-items-start">
+        <!-- Formulario -->
+        <div class="col-md-7 mb-4">
+          <form class="contact-form" id="formWhatsapp" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label"
+                >Nombre <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="telefono" class="form-label"
+                >Teléfono <span class="text-danger">*</span></label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="telefono"
+                name="telefono"
+                pattern="^\d{10}$"
+                title="Ingrese 10 dígitos sin espacios"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="direccion" class="form-label"
+                >Dirección de la casa</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="direccion"
+                name="direccion"
+                placeholder="Calle, número, colonia, ciudad"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="servicio" class="form-label"
+                >Servicio de interés <span class="text-danger">*</span></label
+              >
+              <select
+                class="form-select"
+                id="servicio"
+                name="servicio"
+                required
+              >
+                <option value="" disabled selected>
+                  Seleccione un servicio
+                </option>
+                <option value="reparacion">Reparación urgente</option>
+                <option value="mantenimiento">Mantenimiento</option>
+                <option value="cotizacion">Cotización</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label"
+                >Mensaje (Descripción del problema)
+                <span class="text-danger">*</span></label
+              >
+              <textarea
+                class="form-control"
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                required
+                minlength="10"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+
+        <!-- Contenido -->
+        <div class="col-md-5">
+          <div class="service-content">
+            <h1 class="service-title">Reparaciones la Condesa</h1>
+            <h3 class="service-subtitle">Ponte en contacto con Nosotros.</h3>
+
+            <div class="row">
+              <div class="col-6">
+                <h4>Horario</h4>
+                <p>
+                  Lunes a Viernes: 9:00 AM - 6:00 PM<br />
+                  Sábado: 9:00 AM - 2:00 PM<br />
+                  Domingo: Cerrado
+                </p>
+              </div>
+              <div class="col-6">
+                <h4>Comunícate con Nosotros</h4>
+                <p>
+                  <strong>Teléfono:</strong>
+                  <a href="tel:+521234567890">+52 1 234 567 890</a><br />
+                  <strong>Email:</strong>
+                  <a href="mailto:contacto@reparacioneslacondesa.com"
+                    >contacto@reparacioneslacondesa.com</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <p>
+              ¡Gracias por visitarnos! Si tienes alguna pregunta, un comentario
+              o simplemente quieres saludar, no seas un extraño. Estamos aquí
+              para ayudarte y nos encanta hacerlo. ¡Ponte en contacto!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="trabajos-realizados mt-5">
+        <h3 class="mb-4">Trabajos Realizados</h3>
+
+        <div class="row g-4">
+          <!-- Trabajo 1 -->
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="row g-0 align-items-center">
+                <div class="col-5">
+                  <img
+                    src="../img/lavadora.png"
+                    class="img-fluid rounded-start"
+                    alt="Lavadora reparada"
+                  />
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Problema: Lavadora no centrifuga</h5>
+                    <p class="card-text">
+                      “Gracias por reparar mi lavadora tan rápido y con tan buen
+                      servicio. Ahora funciona como nueva.”
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">– Ana G.</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trabajo 2 -->
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="row g-0 align-items-center flex-row-reverse">
+                <div class="col-5">
+                  <img
+                    src="../img/secadora.png"
+                    class="img-fluid rounded-end"
+                    alt="Secadora reparada"
+                  />
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Problema: Secadora no enciende</h5>
+                    <p class="card-text">
+                      “El equipo estaba completamente descompuesto, pero con su
+                      ayuda ya funciona perfectamente. ¡Muy recomendados!”
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">– Carlos M.</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trabajo 3 -->
+        <div class="row g-4 mt-3">
+          <div class="col-12">
+            <div class="card">
+              <div class="row g-0 align-items-center">
+                <div class="col-md-4">
+                  <img
+                    src="../img/refrigerador.png"
+                    class="img-fluid rounded-start"
+                    alt="Refrigerador reparado"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Problema: Refrigerador no enfría</h5>
+                    <p class="card-text">
+                      “El servicio fue rápido y muy profesional. Mi refrigerador
+                      está funcionando como nuevo.”
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">– Laura P.</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  <script>
+    document
+      .getElementById("formWhatsapp")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Validación
+        const nombre = document.getElementById("nombre").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        if (!nombre || nombre.length < 3) {
+          alert("Por favor ingrese un nombre válido (mínimo 3 caracteres)");
+          return;
+        }
+
+        if (!mensaje || mensaje.length < 10) {
+          alert("El mensaje debe tener al menos 10 caracteres");
+          return;
+        }
+
+        // Obtener datos (incluyendo dirección)
+        const datos = {
+          nombre: nombre,
+          telefono:
+            document.getElementById("telefono").value.trim() ||
+            "No proporcionado",
+          direccion:
+            document.getElementById("direccion").value.trim() ||
+            "No proporcionada",
+          servicio:
+            document.getElementById("servicio").value || "No especificado",
+          mensaje: mensaje,
+        };
+
+        // Formatear mensaje para WhatsApp (con dirección)
+        const texto =
+          `*👤 Nombre:* ${datos.nombre}%0A` +
+          `*📱 Teléfono:* ${datos.telefono}%0A` +
+          `*🏠 Dirección:* ${datos.direccion}%0A` +
+          `*🔧 Servicio:* ${datos.servicio}%0A%0A` +
+          `*✉ Mensaje:*%0A${datos.mensaje}%0A%0A`;
+        // Número en formato internacional (cambia por el tuyo)
+        const numeroWhatsapp = "525515354574"; // Ejemplo para México
+
+        // Abrir WhatsApp
+        window.location.href = `https://wa.me/${numeroWhatsapp}?text=${texto}`;
+      });
+  </script>
+</html>
